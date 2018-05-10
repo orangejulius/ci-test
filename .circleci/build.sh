@@ -21,6 +21,7 @@ cp pelias.json dockerfiles/pelias.json
 cd dockerfiles
 docker-compose ps
 docker run ubuntu whoami
+docker pull pelias/api
 bash ./build.sh
 cd ..
 
