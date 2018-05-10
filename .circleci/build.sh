@@ -8,7 +8,7 @@ cp pelias.json dockerfiles/pelias.json
 # run full build with dockerfiles, this also starts services
 cd dockerfiles
 ls
-./build.sh
+bash ./build.sh
 cd ..
 
 # install node/npm for tests
