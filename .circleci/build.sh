@@ -19,7 +19,7 @@ cp pelias.json dockerfiles/pelias.json
 
 # run full build with dockerfiles, this also starts services
 cd dockerfiles
-ls
+docker-compose ps
 bash ./build.sh
 cd ..
 
