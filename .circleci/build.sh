@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+cat /etc/alpine-release
+docker -v
+
 # install dependencies
 apk --no-cache add curl bash docker libcurl docker py-pip
 pip install docker-compose
