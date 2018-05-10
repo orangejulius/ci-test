@@ -13,7 +13,7 @@ NODE_VERSION='6.14.0'
 git clone 'https://github.com/isaacs/nave.git'
 bash nave/nave.sh 'usemain' "${NODE_VERSION}"
 
-git clone https://github.com/pelias/dockerfiles.git
+git clone https://github.com/pelias/dockerfiles.git -b circle
 
 cp pelias.json dockerfiles/pelias.json
 
