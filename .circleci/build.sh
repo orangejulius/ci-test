@@ -2,11 +2,12 @@
 set -euo pipefail
 
 # install dependencies
-apt-get install curl
+apk --no-cache add curl bash
+export SHELL=bash
 # install node/npm for tests
 NODE_VERSION='6.14.0'
 git clone 'https://github.com/isaacs/nave.git'
-./nave/nave.sh 'usemain' "${NODE_VERSION}"
+bash nave/nave.sh 'usemain' "${NODE_VERSION}"
 
 git clone https://github.com/pelias/dockerfiles.git
 
@@ -15,7 +16,7 @@ cp pelias.json dockerfiles/pelias.json
 # run full build with dockerfiles, this also starts services
 cd dockerfiles
 ls
-sh ./build.sh
+bash ./build.sh
 cd ..
 
 
