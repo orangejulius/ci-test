@@ -1,6 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
+# install dependencies
+apt install curl
+
+# install node/npm for tests
+NODE_VERSION='6.14.0'
+git clone 'https://github.com/isaacs/nave.git'
+./nave/nave.sh 'usemain' "${NODE_VERSION}"
+
 git clone https://github.com/pelias/dockerfiles.git
 
 cp pelias.json dockerfiles/pelias.json
@@ -11,10 +19,6 @@ ls
 sh ./build.sh
 cd ..
 
-# install node/npm for tests
-NODE_VERSION='6.14.0'
-git clone 'https://github.com/isaacs/nave.git'
-./nave/nave.sh 'usemain' "${NODE_VERSION}"
 
 # run tests
 git clone https://github.com/pelias/acceptance-tests.git
