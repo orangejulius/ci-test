@@ -2,7 +2,8 @@
 set -euo pipefail
 
 # install dependencies
-apk --no-cache add curl bash
+apk --no-cache add curl bash docker libcurl docker py-pip
+pip install docker-compose
 export SHELL=bash
 # install node/npm for tests
 NODE_VERSION='6.14.0'
