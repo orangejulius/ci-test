@@ -1,3 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
 git clone https://github.com/pelias/dockerfiles.git
 
 cp pelias.json dockerfiles/pelias.json
