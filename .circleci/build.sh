@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # install dependencies
-apt install curl
+apt-get install curl
 # install node/npm for tests
 NODE_VERSION='6.14.0'
 git clone 'https://github.com/isaacs/nave.git'
