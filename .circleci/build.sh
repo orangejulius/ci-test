@@ -1,9 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-pwd
-exit 0
-
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
@@ -20,6 +17,7 @@ bash nave/nave.sh 'usemain' "${NODE_VERSION}"
 git clone https://github.com/pelias/dockerfiles.git -b circle
 
 cp pelias.json dockerfiles/pelias.json
+cp pelias.json ~/pelias.json
 
 # download wof data separately, with a progress meter, so the build does not expire due to the length of time it takes
 mkdir -p /tmp/whosonfirst/sqlite
