@@ -1,12 +1,10 @@
 version: 2
 jobs:
   build:
+    machine: true
     working_directory: /app
-    docker:
-      - image: docker:17.11.0-ce-git
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Build and run acceptance tests
           command: sh .circleci/build.sh
