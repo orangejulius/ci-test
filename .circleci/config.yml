@@ -6,4 +6,4 @@ jobs:
       - checkout
       - run:
           name: Build and run acceptance tests
-          command: sh .circleci/build.sh
+          command: bash .circleci/build.sh
