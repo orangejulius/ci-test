@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-apt install docker curl docker-compose git
+sudo apt install docker curl docker-compose git
 docker -v
 
 # install node/npm for tests
