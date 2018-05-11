@@ -6,7 +6,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 
 sudo apt update
 
-sudo apt install -y docker-ce curl git
+sudo apt install -y docker-ce curl git pv
 docker -v
 
 # install node/npm for tests
