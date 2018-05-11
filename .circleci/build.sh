@@ -1,13 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-cat /etc/alpine-release
+apt install docker curl docker-compose git
 docker -v
 
-# install dependencies
-apk --no-cache add curl bash docker libcurl docker py-pip
-pip install docker-compose
-export SHELL=bash
 # install node/npm for tests
 NODE_VERSION='6.14.0'
 git clone 'https://github.com/isaacs/nave.git'
