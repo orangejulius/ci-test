@@ -28,13 +28,8 @@ popd > /dev/null
 
 # run full build with dockerfiles, this also starts services
 cd dockerfiles
-docker-compose ps
-docker-compose version
-docker run ubuntu whoami
-docker pull pelias/api:staging
 bash ./build.sh
 cd ..
-
 
 # run tests
 git clone https://github.com/pelias/acceptance-tests.git -b portland-tests
