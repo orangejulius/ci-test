@@ -16,3 +16,6 @@ jobs:
       - run:
           name: Run acceptance_tests.sh
           command: bash 03_run_acceptance_tests.sh
+      - run:
+          name: Run autocomplete acceptance_tests.sh
+          command: bash 04_run_autocomplete_acceptance_tests.sh
