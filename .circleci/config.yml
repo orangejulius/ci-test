@@ -5,5 +5,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build and run acceptance tests
-          command: bash .circleci/build.sh
+          name: Setup Ubuntu
+          command: bash 00_setup.sh
+      - run:
+          name: Download Who's on First data
+          command: bash 01_download_wof.sh
+      - run:
+          name: Run full docker-compose process
+          command: bash 02_docker_build.sh
+      - run:
+          name: Run acceptance_tests.sh
+          command: bash 03_run_acceptance_tests.sh
