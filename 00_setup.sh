@@ -16,8 +16,10 @@ bash nave/nave.sh 'usemain' "${NODE_VERSION}"
 #install dockerfiles
 git clone https://github.com/pelias/dockerfiles.git
 
+# copy over overwritten files
 cp pelias.json dockerfiles/pelias.json
 cp pelias.json ~/pelias.json
+cp docker-compose.yml dockerfiles/
 
 # install acceptance tests
 git clone https://github.com/pelias/acceptance-tests.git -b portland-tests

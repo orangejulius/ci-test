@@ -11,11 +11,14 @@ jobs:
           name: Download Who's on First data
           command: bash 01_download_wof.sh
       - run:
+          name: Pull docker images
+          command: bash 02_docker_compose_pull.sh
+      - run:
           name: Run full docker-compose process
-          command: bash 02_docker_build.sh
+          command: bash 03_docker_build.sh
       - run:
           name: Run acceptance_tests.sh
-          command: bash 03_run_acceptance_tests.sh
+          command: bash 04_run_acceptance_tests.sh
       - run:
           name: Run autocomplete acceptance_tests.sh
-          command: bash 04_run_autocomplete_acceptance_tests.sh
+          command: bash 05_run_autocomplete_acceptance_tests.sh
