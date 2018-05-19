@@ -14,6 +14,8 @@ sudo chmod ugo+x /usr/local/bin/docker-compose
 
 # start docker
 sudo /etc/init.d/docker start
+sudo gpasswd -a $USER docker
+newgrp docker
 
 # install node/npm for tests
 NODE_VERSION='6.14.0'
