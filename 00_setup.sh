@@ -13,7 +13,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 sudo chmod ugo+x /usr/local/bin/docker-compose
 
 # start docker
-sudo /etc/init.d/docker start
+sudo /etc/init.d/docker start || true
 sudo gpasswd -a $USER docker
 newgrp docker
 
