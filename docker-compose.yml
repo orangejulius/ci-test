@@ -89,7 +89,7 @@ services:
       - "${DATA_DIR}:/data"
   interpolation:
     depends_on: [ "libpostal_baseimage" ]
-    image: pelias/interpolation
+    image: pelias/interpolation:libpostal-service
     container_name: pelias_interpolation
     restart: always
     environment: [ "PORT=4300" ]
