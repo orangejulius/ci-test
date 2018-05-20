@@ -2,7 +2,6 @@ version: '2'
 networks:
   pelias:
     driver: bridge
-volumes:
 services:
   schema:
     image: pelias/schema:portland-synonyms
