@@ -3,13 +3,7 @@ networks:
   pelias:
     driver: bridge
 volumes:
-  libpostaldata:
-    driver: local
 services:
-  libpostal_baseimage:
-    image: pelias/libpostal_baseimage
-    container_name: pelias_libpostal_baseimage
-    build: libpostal_baseimage
   schema:
     image: pelias/schema:portland-synonyms
     container_name: pelias_schema
@@ -88,7 +82,6 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   interpolation:
-    depends_on: [ "libpostal_baseimage" ]
     image: pelias/interpolation:libpostal-service
     container_name: pelias_interpolation
     restart: always
@@ -97,7 +90,6 @@ services:
     networks: [ "pelias" ]
     volumes:
       - "./pelias.json:/code/pelias.json"
-      - "libpostaldata:/usr/share/libpostal"
       - "${DATA_DIR}:/data"
   pip-service:
     image: pelias/pip-service
