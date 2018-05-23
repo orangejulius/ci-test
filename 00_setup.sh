@@ -14,7 +14,7 @@ git clone 'https://github.com/isaacs/nave.git'
 bash nave/nave.sh 'usemain' "${NODE_VERSION}"
 
 #install dockerfiles
-git clone https://github.com/pelias/dockerfiles.git
+git clone https://github.com/pelias/dockerfiles.git -b circle
 
 # copy over overwritten files
 cp pelias.json dockerfiles/pelias.json

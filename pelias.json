@@ -39,6 +39,12 @@
       }
     }
   },
+  "services": {
+    "libpostal": {
+      "url": "http://libpostal:8080",
+      "timeout": 5000
+    }
+  },
   "imports": {
     "adminLookup": {
       "enabled": true
