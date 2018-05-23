@@ -22,3 +22,15 @@ jobs:
       - run:
           name: Run autocomplete acceptance_tests.sh
           command: bash 05_run_autocomplete_acceptance_tests.sh
+workflows:
+  version: 2
+  nightly:
+    triggers:
+    - schedule:
+      cron: "0 0 * * *"
+      filters:
+        branches:
+          only:
+           - master
+           - staging
+           - production
