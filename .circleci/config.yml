@@ -26,13 +26,13 @@ workflows:
   version: 2
   nightly:
     triggers:
-    - schedule:
-        cron: "0 0 * * *"
-        filters:
-          branches:
-            only:
-            - master
-            - staging
-            - production
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+              - master
+              - staging
+              - production
     jobs:
       - build
