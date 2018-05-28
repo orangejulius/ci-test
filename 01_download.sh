@@ -3,6 +3,10 @@ set -euo pipefail
 
 DATA_DIR="${DATA_DIR:-/tmp}"
 
+# download dockerfiles while other things are running
+cd $DATA_DIR/dockerfiles
+docker-compose pull &
+
 # download wof data separately, with a progress meter, so the build does not expire due to the length of time it takes
 mkdir -p $DATA_DIR/whosonfirst/sqlite
 cd $DATA_DIR/whosonfirst/sqlite
