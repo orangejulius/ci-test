@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -euxo pipefail
 
 DATA_DIR="${DATA_DIR:-/tmp}"
 
