@@ -2,7 +2,7 @@
 set -euo pipefail
 
 #install dockerfiles
-git clone https://github.com/pelias/dockerfiles.git -b circle
+git clone https://github.com/pelias/dockerfiles.git -b aws-ci
 
 # copy over overwritten files
 cp pelias.json dockerfiles/pelias.json
