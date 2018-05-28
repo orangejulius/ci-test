@@ -17,3 +17,4 @@ done
 rm *.zip
 
 # download polylines file
+curl https://s3.amazonaws.com/pelias-data.nextzen.org/polylines/california-2018-05-28.polyline.gz | gunzip > /tmp/polylines/extract.0sv
