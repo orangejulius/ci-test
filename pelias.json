@@ -51,23 +51,23 @@
     },
     "geonames": {
       "datapath": "/data/geonames",
-      "countryCode": "ALL"
+      "countryCode": "USA"
     },
     "openstreetmap": {
       "download": [
         {
-          "sourceURL": "https://s3.amazonaws.com/metro-extracts.nextzen.org/portland_oregon.osm.pbf"
+          "sourceURL": "http://download.geofabrik.de/north-america/us/california-latest.osm.pbf"
         }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
       "import": [{
-        "filename": "portland_oregon.osm.pbf"
+        "filename": "california-latest.osm.pbf"
       }]
     },
     "openaddresses": {
-      "datapath": "/data/openaddresses",
-      "files": [ "us/or/portland_metro.csv" ]
+      "datapath": "/data/openaddresses/us/ca",
+      "files": []
     },
     "polyline": {
       "datapath": "/data/polylines",
@@ -77,7 +77,7 @@
       "datapath": "/data/whosonfirst",
       "importVenues": false,
       "importPostalcodes": true,
-      "importPlace": "101715829"
+      "importPlace": "85688637"
     },
     "interpolation": {
       "download": {
@@ -85,7 +85,7 @@
           "datapath": "/data/tiger",
           "states": [
             {
-              "state_code": 41
+              "state_code": "06"
             }
           ]
         }
