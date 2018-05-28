@@ -6,3 +6,14 @@ mkdir -p /tmp/whosonfirst/sqlite
 cd /tmp/whosonfirst/sqlite
 echo @`date +%s` > whosonfirst-data-latest.db.timestamp
 curl https://dist.whosonfirst.org/sqlite/whosonfirst-data-latest.db.bz2 | pv | bunzip2 > whosonfirst-data-latest.db
+
+# also download other custom data
+cd /tmp/openaddresses
+wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west.zip
+wget https://s3.amazonaws.com/data.openaddresses.io/openaddr-collected-us_west-sa.zip
+for archive in `ls -1 *.zip`; do
+  unzip -oq $archive
+done
+rm *.zip
+
+# download polylines file
