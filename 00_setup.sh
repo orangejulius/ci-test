@@ -3,7 +3,6 @@ set -euo pipefail
 
 DATA_DIR="${DATA_DIR:-/tmp}"
 mkdir -p $DATA_DIR
-cd $DATA_DIR
 
 #install dockerfiles
 git clone https://github.com/pelias/dockerfiles.git -b aws-ci
