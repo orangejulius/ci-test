@@ -1,4 +1,7 @@
 #!/bin/bash
+set -euxo pipefail
+
+export DATA_DIR="${DATA_DIR:-/tmp}"
 
 bash 00_*
 bash 01_*
